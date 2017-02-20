@@ -1,4 +1,13 @@
 $header-height: 180px
+$body-color: #ededed
+$main-font-size: 13px
+$h2-font-size: 18px
+
+body
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 13px
+  line-height: $main-font-size * 2
+  background: $body-color
 
 .header
   height: $header-height
@@ -6,11 +15,66 @@ $header-height: 180px
   border-bottom: 1px solid #9bd9e0
 
 nav
+  &.navbar-default .navbar-brand
+    color: rgba(255, 255, 255, 1)
+    margin: 0
+    padding: 0
 
-  button.navbar-toggle
-    border: 1px solid #335f64
+    img
+      width: auto
+      height: 98%
 
-    span.icon-bar
-      color: #fff
-      border: 1px solid #335f64
+  &.navbar-default
+    font-size: 16px
+    background-color: rgba(76, 143, 150, 1)
+    border-width: 1px
+    border-radius: 0px
+
+  &.navbar-default .navbar-nav>li>a
+    color: rgba(255, 255, 255, 1)
+    background-color: rgba(27, 33, 48, 1)
+
+  &.navbar-default .navbar-nav>li>a:hover,
+  &.navbar-default .navbar-nav>li>a:focus
+    color: rgba(255, 255, 255, 1)
+    background-color: rgba(51, 95, 100, 1)
+
+  &.navbar-default .navbar-nav>.active>a,
+  &.navbar-default .navbar-nav>.active>a:hover,
+  &.navbar-default .navbar-nav>.active>a:focus
+    color: rgba(255, 255, 255, 1)
+    background-color: rgba(51, 95, 100, 1)
+
+  &.navbar-default .navbar-toggle
+    border-color: #335f64
+
+  &.navbar-default .navbar-toggle:hover,
+  &.navbar-default .navbar-toggle:focus
+    background-color: #335f64
+
+  &.navbar-default .navbar-toggle .icon-bar
+    background-color: #335f64
+
+  &.navbar-default .navbar-toggle:hover .icon-bar,
+  &.navbar-default .navbar-toggle:focus .icon-bar
+    background-color: #4c8f96
+
+
+article
+  .article-img
+    height: 320px
+    background: transparent url("../img/bg-figure.png") no-repeat
+    background-position: center bottom
+    background-size: 100%
+
+    img
+      border-radius: 3%
+      width: 100%
+      border: 5px solid #5fb3bd
+
+  h2
+    margin-top: 0
+
+
+.info-block
 
