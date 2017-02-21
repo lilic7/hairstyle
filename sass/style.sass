@@ -1,5 +1,15 @@
 $header-height: 180px
 $body-color: #ededed
+
+$info-color: #519194
+
+$main-color: #335F64
+$second-color: #4c8f96
+
+$opus-color: #1B2130
+
+$main-border: #5fb3bd
+
 $main-font-size: 13px
 $h2-font-size: 18px
 
@@ -16,7 +26,7 @@ body
 
 nav
   &.navbar-default .navbar-brand
-    color: rgba(255, 255, 255, 1)
+    color: #fff
     margin: 0
     padding: 0
 
@@ -26,55 +36,72 @@ nav
 
   &.navbar-default
     font-size: 16px
-    background-color: rgba(76, 143, 150, 1)
+    background-color: $second-color
     border-width: 1px
     border-radius: 0px
 
   &.navbar-default .navbar-nav>li>a
-    color: rgba(255, 255, 255, 1)
-    background-color: rgba(27, 33, 48, 1)
+    color: #fff
+    background-color: $opus-color
 
   &.navbar-default .navbar-nav>li>a:hover,
   &.navbar-default .navbar-nav>li>a:focus
-    color: rgba(255, 255, 255, 1)
-    background-color: rgba(51, 95, 100, 1)
+    color: #fff
+    background-color: $main-color
 
   &.navbar-default .navbar-nav>.active>a,
   &.navbar-default .navbar-nav>.active>a:hover,
   &.navbar-default .navbar-nav>.active>a:focus
-    color: rgba(255, 255, 255, 1)
-    background-color: rgba(51, 95, 100, 1)
+    color: #fff
+    background-color: $main-color
 
   &.navbar-default .navbar-toggle
-    border-color: #335f64
+    border-color: $main-color
 
   &.navbar-default .navbar-toggle:hover,
   &.navbar-default .navbar-toggle:focus
-    background-color: #335f64
+    background-color: $main-color
 
   &.navbar-default .navbar-toggle .icon-bar
-    background-color: #335f64
+    background-color: $main-color
 
   &.navbar-default .navbar-toggle:hover .icon-bar,
   &.navbar-default .navbar-toggle:focus .icon-bar
-    background-color: #4c8f96
+    background-color: $second-color
 
 
 article
+  margin-bottom: 30px
   .article-img
     height: 320px
     background: transparent url("../img/bg-figure.png") no-repeat
     background-position: center bottom
     background-size: 100%
+    margin-bottom: -25px
 
     img
       border-radius: 3%
       width: 100%
-      border: 5px solid #5fb3bd
+      border: 5px solid $main-border
 
   h2
-    margin-top: 0
+    margin: 0
 
 
 .info-block
+  color: #fff
+  background-color: $info-color
+  border: 5px solid $main-border
+  border-radius: 5px
+
+
+  .block-title
+    background-image: url("../img/bg-featured.png")
+    background-repeat: repeat-x
+    display: inline-block
+    padding: 5px
+    margin-top: -15px
+
+  .author
+    text-align: right
 
