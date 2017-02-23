@@ -10,6 +10,8 @@ $opus-color: #1B2130
 
 $main-border: #5fb3bd
 
+$social-bgr: #387a82
+
 $main-font-size: 13px
 $h2-font-size: 18px
 
@@ -38,7 +40,6 @@ nav
     font-size: 16px
     background-color: $second-color
     border-width: 1px
-    border-radius: 0px
 
   &.navbar-default .navbar-nav>li>a
     color: #fff
@@ -73,11 +74,10 @@ nav
 article
   margin-bottom: 30px
   .article-img
-    height: 320px
     background: transparent url("../img/bg-figure.png") no-repeat
-    background-position: center bottom
+    background-position: bottom
     background-size: 100%
-    margin-bottom: -25px
+    padding-bottom: 15%
 
     img
       border-radius: 3%
@@ -88,20 +88,114 @@ article
     margin: 0
 
 
+
 .info-block
   color: #fff
   background-color: $info-color
   border: 5px solid $main-border
   border-radius: 5px
+  padding-top: 35px
+  display: block
+  position: relative
+  margin-bottom: 35px
 
-
-  .block-title
+  .info-block-head
     background-image: url("../img/bg-featured.png")
     background-repeat: repeat-x
+    font-family: Comfortaa, Arial, Helvetica, sans-serif
     display: inline-block
-    padding: 5px
-    margin-top: -15px
+    font-size: 20px
+    border-radius: 5px
+    color: #fff
+    padding: 10px 20px
+    position: absolute
+    top: -20px
+    left: 15px
+
+
+  &.inverted
+    color: #464646
+    background-color: #fff
+    
+  &.on-right
+    text-align: right
+    min-height: 225px
+    padding-right: 5%
+    z-index: -10
+
+    img
+      position: absolute
+      top: -15px
+      left: 0
+      padding: 0
+      z-index: -5
+
+  h1
+    font-size: 26px
+    line-height: 36px
+
+  img
+    float: left
+    margin: 0 50px
+    border-radius: 5px
 
   .author
     text-align: right
 
+  p.bold
+    font-weight: bold
+    font-size: 14px
+    padding-right: 5px
+
+
+.footer
+  background: $second-color
+  min-height: 80px
+  color: #fff
+
+  .social
+    background-color: $social-bgr
+    border-radius: 5px
+    padding: 15px 25px
+    width: 200px
+    height: 50px
+    margin: 15px auto
+    
+    a
+      text-indent: -99999px
+      background: url("../img/icons.png") no-repeat
+      display: block
+      float: left
+      margin: 0 8px
+      width: 20px
+      height: 20px
+
+
+      &#tweeter
+        background-position: 0 -31px
+
+        &:hover, &:active
+          background-position: -26px -31px
+
+      &#facebook
+        background-position: 0 -57px
+
+        &:hover, &:active
+          background-position: -26px -57px
+
+      &#googleplus
+        background-position: 0 -83px
+
+        &:hover, &:active
+          background-position: -26px -83px
+
+      &#pinterest
+        background-position: 0 -107px
+
+        &:hover, &:active
+          background-position: -26px -107px
+
+
+  .copyright p
+    text-align: center
+    line-height: 14px
