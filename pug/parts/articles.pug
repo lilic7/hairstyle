@@ -1,0 +1,39 @@
+- var articles = [
+   {
+        img: "../img/hairstyle17.jpg",
+        alt: "Hairstyle 17",
+        title: "Best hairstylist",
+        content: "Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free!"
+   },
+   {
+        img: "../img/hairstyle18.jpg",
+        alt: "Hairstyle 18",
+        title: "Featured Hairstylists",
+        content: "But if you don’t find any website template you can use, you can try our Free Web Design service and tell us all about it. Maybe you’re looking for something different, something special."
+   },
+   {
+        img: "../img/hairstyle19.jpg",
+        alt: "Hairstyle 19",
+        title: "Hair Care",
+        content: "You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the Forums."
+   },
+   {
+        img: "../img/hairstyle20.jpg",
+        alt: "Hairstyle 20",
+        title: "We “Hair” You",
+        content: "Looking for more templates? Just browse through all our Free Website Templates and find what you’re looking for. But if you don’t find any website template you can use, you can try our Free Web Design service and tell us all about it."
+   },
+ ]
+
+
+mixin renderArticle(articles)
+    each article in articles
+        div.col-xs-12.col-sm-6
+            article.row
+                div.article-img.col-sm-12
+                    img(src=article.img, alt=article.alt)
+                h2.col-sm-12= article.title
+                p.col-sm-12= article.content
+
+
++renderArticle(articles)

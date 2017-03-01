@@ -1,19 +1,8 @@
-$header-height: 180px
-$body-color: #ededed
-
-$info-color: #519194
-
-$main-color: #335F64
-$second-color: #4c8f96
-
-$opus-color: #1B2130
-
-$main-border: #5fb3bd
-
-$social-bgr: #387a82
-
-$main-font-size: 13px
-$h2-font-size: 18px
+@import "variables"
+@import "nav-menu"
+@import "article"
+@import "info-block"
+@import "footer"
 
 body
   font-family: Arial, Helvetica, sans-serif
@@ -22,180 +11,15 @@ body
   background: $body-color
 
 .header
-  height: $header-height
+  min-height: $header-height
   background: url("../img/bg-header.gif")
-  border-bottom: 1px solid #9bd9e0
-
-nav
-  &.navbar-default .navbar-brand
-    color: #fff
-    margin: 0
-    padding: 0
-
-    img
-      width: auto
-      height: 98%
-
-  &.navbar-default
-    font-size: 16px
-    background-color: $second-color
-    border-width: 1px
-
-  &.navbar-default .navbar-nav>li>a
-    color: #fff
-    background-color: $opus-color
-
-  &.navbar-default .navbar-nav>li>a:hover,
-  &.navbar-default .navbar-nav>li>a:focus
-    color: #fff
-    background-color: $main-color
-
-  &.navbar-default .navbar-nav>.active>a,
-  &.navbar-default .navbar-nav>.active>a:hover,
-  &.navbar-default .navbar-nav>.active>a:focus
-    color: #fff
-    background-color: $main-color
-
-  &.navbar-default .navbar-toggle
-    border-color: $main-color
-
-  &.navbar-default .navbar-toggle:hover,
-  &.navbar-default .navbar-toggle:focus
-    background-color: $main-color
-
-  &.navbar-default .navbar-toggle .icon-bar
-    background-color: $main-color
-
-  &.navbar-default .navbar-toggle:hover .icon-bar,
-  &.navbar-default .navbar-toggle:focus .icon-bar
-    background-color: $second-color
+  margin-bottom: 20px
 
 
-article
-  margin-bottom: 30px
-  .article-img
-    background: transparent url("../img/bg-figure.png") no-repeat
-    background-position: bottom
-    background-size: 100%
-    padding-bottom: 15%
+@media screen and (min-width: 500px)
+  .container
+    width: auto
 
-    img
-      border-radius: 3%
-      width: 100%
-      border: 5px solid $main-border
-
-  h2
-    margin: 0
-
-
-
-.info-block
-  color: #fff
-  background-color: $info-color
-  border: 5px solid $main-border
-  border-radius: 5px
-  padding-top: 35px
-  display: block
-  position: relative
-  margin-bottom: 35px
-
-  .info-block-head
-    background-image: url("../img/bg-featured.png")
-    background-repeat: repeat-x
-    font-family: Comfortaa, Arial, Helvetica, sans-serif
-    display: inline-block
-    font-size: 20px
-    border-radius: 5px
-    color: #fff
-    padding: 10px 20px
-    position: absolute
-    top: -20px
-    left: 15px
-
-
-  &.inverted
-    color: #464646
-    background-color: #fff
-    
-  &.on-right
-    text-align: right
-    min-height: 225px
-    padding-right: 5%
-    z-index: -10
-
-    img
-      position: absolute
-      top: -15px
-      left: 0
-      padding: 0
-      z-index: -5
-
-  h1
-    font-size: 26px
-    line-height: 36px
-
-  img
-    float: left
-    margin: 0 50px
-    border-radius: 5px
-
-  .author
-    text-align: right
-
-  p.bold
-    font-weight: bold
-    font-size: 14px
-    padding-right: 5px
-
-
-.footer
-  background: $second-color
-  min-height: 80px
-  color: #fff
-
-  .social
-    background-color: $social-bgr
-    border-radius: 5px
-    padding: 15px 25px
-    width: 200px
-    height: 50px
-    margin: 15px auto
-    
-    a
-      text-indent: -99999px
-      background: url("../img/icons.png") no-repeat
-      display: block
-      float: left
-      margin: 0 8px
-      width: 20px
-      height: 20px
-
-
-      &#tweeter
-        background-position: 0 -31px
-
-        &:hover, &:active
-          background-position: -26px -31px
-
-      &#facebook
-        background-position: 0 -57px
-
-        &:hover, &:active
-          background-position: -26px -57px
-
-      &#googleplus
-        background-position: 0 -83px
-
-        &:hover, &:active
-          background-position: -26px -83px
-
-      &#pinterest
-        background-position: 0 -107px
-
-        &:hover, &:active
-          background-position: -26px -107px
-
-
-  .copyright p
-    text-align: center
-    line-height: 14px
+  .header
+    height: 180px
+    margin-bottom: 20px

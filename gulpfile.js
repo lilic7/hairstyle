@@ -1,10 +1,12 @@
 var gulp = require("gulp");
 var gutil = require("gulp-util");
+var concat = require("gulp-concat");
 var sass = require("gulp-sass");
+var pug = require("gulp-pug");
 var browserSync = require("browser-sync").create();
 
 function browser_sync() {
-    browserSync.init(null, {
+    browserSync.init({
         proxy: 'hairstyle.app',
         files: [
             'public/*.html',
@@ -16,6 +18,15 @@ function browser_sync() {
 
 function watch() {
     gulp.watch("sass/*.sass", Sass);
+    gulp.watch("pug/*.pug", renderPUGtoHTML);
+    gulp.watch("pug/*/*.pug", renderPUGtoHTML);
+}
+
+function renderPUGtoHTML() {
+    return gulp.src("pug/*.pug")
+        .pipe(pug({pretty: true, debug: true, compileDebug: true}))
+        .pipe(gulp.dest("public"))
+        .pipe(browserSync.stream({once: true}));
 }
 
 function Sass(){
@@ -25,5 +36,4 @@ function Sass(){
         .pipe(browserSync.stream());
 }
 
-
-gulp.task('default', gulp.series(Sass, gulp.parallel(watch, browser_sync)));
+gulp.task('default', gulp.series(Sass, renderPUGtoHTML, gulp.parallel(watch, browser_sync)));
