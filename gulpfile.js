@@ -10,7 +10,6 @@ function browser_sync() {
         proxy: 'hairstyle.app',
         files: [
             'public/*.html',
-            'public/*/*.html'
         ],
         port: 7000
     });
@@ -19,12 +18,12 @@ function browser_sync() {
 function watch() {
     gulp.watch("sass/*.sass", Sass);
     gulp.watch("pug/*.pug", renderPUGtoHTML);
-    gulp.watch("pug/*/*.pug", renderPUGtoHTML);
+    gulp.watch("pug/**/*.pug", renderPUGtoHTML);
 }
 
 function renderPUGtoHTML() {
     return gulp.src("pug/*.pug")
-        .pipe(pug({pretty: true, debug: true, compileDebug: true}))
+        .pipe(pug({pretty: true}))
         .pipe(gulp.dest("public"))
         .pipe(browserSync.stream({once: true}));
 }

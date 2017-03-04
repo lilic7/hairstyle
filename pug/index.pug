@@ -1,17 +1,10 @@
-doctype
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, iitial-scale=1")
-        link(rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.css")
-        link(rel="stylesheet" href="../css/style.css")
-        title HairStyle Salon
-    body
-        div.container-fluid
-        // HEADER
-        include parts/header
-        // HEADER END
+extends parts/layout
 
-        div.container
-            div.row
-                include parts/articles
+block body
+    .container
+        .row.hidden-xs
+            include parts/index/slider
+        .row
+            include parts/index/articles
+        .row
+            include parts/index/info-blocks
