@@ -1,15 +1,17 @@
 @import "variables"
-@import "nav-menu"
-@import "article"
-@import "info-block"
-@import "footer"
-@import "slider"
+
+html
+  font-size: $base-font-size
 
 body
-  font-family: Arial, Helvetica, sans-serif
-  font-size: 13px
-  line-height: $main-font-size * 2
+  font: 1rem/$base-line-height  Arial, Helvetica, sans-serif !important
   background: $body-color
+
+
+@import "nav-menu"
+
+@import "slider"
+
 
 .header
   min-height: $header-height
@@ -18,9 +20,10 @@ body
 
 
 @media screen and (min-width: 500px)
-  .container
-    width: 960px
 
   .header
     height: 180px
     margin-bottom: 20px
+
+
+@import "footer"
